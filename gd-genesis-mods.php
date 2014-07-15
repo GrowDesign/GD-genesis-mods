@@ -4,7 +4,7 @@
 Plugin Name: GD Genesis Mods
 Plugin URI: https://github.com/GrowDesign/GD-genesis-mods/
 Description: Add additional customizations to Genesis Theme.
-Version: 1.8.5
+Version: 1.8.6
 Author: Bradford Knowlton
 Author URI: http://bradknowlton.com/
 License:           GNU General Public License v2
@@ -30,12 +30,11 @@ function genesis_do_new_header() {
     	do_action( 'genesis_site_description' ); 
     echo '</div><!-- end #title-area -->'; 
     
-    if ( is_active_sidebar( 'header-right' ) || has_action( 'genesis_header_right' ) ) { 
-        echo '<div class="widget-area">'; 
-        do_action( 'genesis_header_right' ); 
-        dynamic_sidebar( 'header-right' ); 
-        echo '</div><!-- end .widget-area -->'; 
-    } 
+    echo '<div class="widget-area">'; 
+    echo '<h2>GROUND PENETRATING RADAR <span class="red">&bull;</span> SUBSURFACE IMAGING <span class="red">&bull;</span> UTILITY LOCATING</h2>';
+    echo '<h3>(718) 569-8557</h3>';
+    echo '</div><!-- end .widget-area -->'; 
+     
 } 
 
 
@@ -43,14 +42,7 @@ function hook_css()
 {
 
 $output="<style> 
-#header {
-    background: none !important;
-}
-div#title-area img {
-	width: 50%;
-	max-width: 160px;
-	height: auto;
-}
+
 </style>";
 
 echo $output;
